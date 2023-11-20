@@ -2,7 +2,8 @@ package br.edu.ifsul.cstsi.lpoo_orm_springdata_maven.model;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity(name = "Emprestimo")
 @Table(name = "emprestimo")
@@ -12,10 +13,10 @@ public class Emprestimo {
     private Long id;
 
     @Column(name = "dt_emprestimo", nullable = false)
-    private Date dataEmprestimo;
+    private LocalDate dataEmprestimo;
 
     @Column(name = "dt_devolucao", nullable = false)
-    private Date dataDevolucao;
+    private LocalDate dataDevolucao;
 
     @OneToOne
     private Clientes cliente;
@@ -26,7 +27,7 @@ public class Emprestimo {
     public Emprestimo() {
     }
 
-    public Emprestimo(Long id, Date dataEmprestimo, Date dataDevolucao, Clientes cliente, Exemplares exemplar) {
+    public Emprestimo(Long id, LocalDate dataEmprestimo, LocalDate dataDevolucao, Clientes cliente, Exemplares exemplar) {
         this.id = id;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
@@ -42,19 +43,19 @@ public class Emprestimo {
         this.id = id;
     }
 
-    public Date getDataEmprestimo() {
+    public LocalDate getDataEmprestimo() {
         return dataEmprestimo;
     }
 
-    public void setDataEmprestimo(Date dataEmprestimo) {
+    public void setDataEmprestimo(LocalDate dataEmprestimo) {
         this.dataEmprestimo = dataEmprestimo;
     }
 
-    public Date getDataDevolucao() {
+    public LocalDate getDataDevolucao() {
         return dataDevolucao;
     }
 
-    public void setDataDevolucao(Date dataDevolucao) {
+    public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
 
