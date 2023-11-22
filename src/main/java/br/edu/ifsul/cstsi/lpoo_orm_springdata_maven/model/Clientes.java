@@ -26,7 +26,7 @@ public class Clientes {
     private int tipoCliente;
 
     @OneToOne
-    private Exemplares exemplare;
+    private Exemplares exemplar;
 
     public Clientes() {
     }
