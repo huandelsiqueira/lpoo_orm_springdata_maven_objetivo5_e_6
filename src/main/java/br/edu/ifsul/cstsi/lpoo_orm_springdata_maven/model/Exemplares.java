@@ -18,7 +18,7 @@ public class Exemplares {
     private int tipoExemplar;
 
     @OneToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "id_exemplar")
     private Clientes cliente;
 
     public Exemplares() {
