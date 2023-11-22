@@ -10,6 +10,7 @@ import java.time.LocalDate;
 public class Emprestimo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_emprestimo")
     private Long id;
 
     @Column(name = "dt_emprestimo", nullable = false)

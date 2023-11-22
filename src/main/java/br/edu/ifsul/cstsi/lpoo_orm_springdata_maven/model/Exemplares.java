@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 public class Exemplares {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_exemplar")
     private Long id;
 
     @Column(name = "nome_exemplar", nullable = false)
@@ -17,6 +18,7 @@ public class Exemplares {
     private int tipoExemplar;
 
     @OneToOne
+    @JoinColumn(name = "id_cliente")
     private Clientes cliente;
 
     public Exemplares() {

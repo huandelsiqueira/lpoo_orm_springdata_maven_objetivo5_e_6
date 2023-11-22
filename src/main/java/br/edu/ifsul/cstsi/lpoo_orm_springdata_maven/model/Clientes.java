@@ -25,7 +25,7 @@ public class Clientes {
     @Column(name = "tipo_cliente")
     private int tipoCliente;
 
-    @OneToOne
+    @OneToOne(mappedBy = "cliente")
     private Exemplares exemplar;
 
     public Clientes() {
