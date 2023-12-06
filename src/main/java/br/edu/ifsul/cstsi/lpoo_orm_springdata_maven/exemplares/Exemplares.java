@@ -1,10 +1,15 @@
-package br.edu.ifsul.cstsi.lpoo_orm_springdata_maven.model;
+package br.edu.ifsul.cstsi.lpoo_orm_springdata_maven.exemplares;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity(name = "Exemplares")
 @Table(name = "exemplares")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Exemplares {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +20,6 @@ public class Exemplares {
     private String nome;
 
     @Column(name = "tipo_exemplar", nullable = false)
-    private int tipoExemplar;
+    private String tipoExemplar;
 
 }

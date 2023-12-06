@@ -1,5 +1,6 @@
 package br.edu.ifsul.cstsi.lpoo_orm_springdata_maven.model;
 
+import br.edu.ifsul.cstsi.lpoo_orm_springdata_maven.exemplares.Exemplares;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

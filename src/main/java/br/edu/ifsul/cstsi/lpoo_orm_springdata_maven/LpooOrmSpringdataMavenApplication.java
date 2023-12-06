@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LpooOrmSpringdataMavenApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(LpooOrmSpringdataMavenApplication.class, args);
+
+        HomeController.main(null);
+
     }
 
 }
